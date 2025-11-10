@@ -1,0 +1,54 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+{% if amount == 40 %} 40 pytań wyniki {% else %} Wynik wszystkich pytań {% endif %}
+{% endblock %}
+{% load static %}
+{% load filters %}
+{% block css %}
+    <link rel="stylesheet"  type="text/css" href="{% static 'hello/css/styleQuestions.css' %}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h2>Twój wynik to {{ score|calculate_score:amount }}%</h2>
+</header>
+<div id="button-container">
+    <input type="button" value="Schowaj prawidłowe">
+</div>
+{% for question in questions %}
+    <div class="{% if answers|get_answer:question.id == question.answer_correct %}question{% else %}question wrong{% endif %}">
+        <h2>{{ forloop.counter }}. {{ question.question|safe }}  <sup class="database-id">{{ question.id }}</sup></h2>
+        <div class="answer">
+            <p class="{% if answers|get_answer:question.id == 'A' %}chosen{% elif question.answer_correct == 'A' %}correctAns{% else %}end{% endif %}">
+                A. {{ question.answer_a|safe }}
+            </p>
+        </div>
+        <div class="answer">
+            <p class="{% if answers|get_answer:question.id == 'B' %}chosen{% elif question.answer_correct == 'B' %}correctAns{% else %}end{% endif %}">
+                B. {{ question.answer_b|safe }}
+            </p>
+        </div>
+        <div class="answer">
+            <p class="{% if answers|get_answer:question.id == 'C' %}chosen{% elif question.answer_correct == 'C' %}correctAns{% else %}end{% endif %}">
+                C. {{ question.answer_c|safe }}
+            </p>
+        </div>
+        <div class="answer">
+            <p class="{% if answers|get_answer:question.id == 'D' %}chosen{% elif question.answer_correct == 'D' %}correctAns{% else %}end{% endif %}">
+                D. {{ question.answer_d|safe }}
+            </p>
+        </div>
+        {% if question.img != '' %}
+            <div class="image">
+                <img src="{% static 'hello/img/' %}{{ category }}_{{ question.id }}.jpg" alt="Obraz">
+            </div>
+        {% endif %}
+        <p class="correct">
+            Prawdiłowa odpowiedź to: {{ question.answer_correct }}
+        </p>
+    </div>
+{% endfor %}
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'hello/js/all_questions.js' %}"></script>
+{% endblock %}

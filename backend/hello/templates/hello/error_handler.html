@@ -1,0 +1,15 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Błąd
+{% endblock %}
+{% block content %}
+    <header style="text-align: center;">
+        <h1>Błąd</h1>
+    </header>
+    <h3>{{ error }}</h3>
+    <p style="text-align: center; margin-bottom:80px;">
+        <a href="{% url 'home' %}">
+            Wróć na stronę główną
+        </a>
+    </p>
+{% endblock %}

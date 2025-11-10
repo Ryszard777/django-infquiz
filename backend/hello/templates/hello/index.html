@@ -1,0 +1,80 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Wyniki
+{% endblock %}
+{% load static %}
+{% load filters %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/css/scores.css' %}">
+{% endblock %}
+{% block content %}
+<header>
+    Twoje wyniki z egzaminów
+</header>
+<br/>
+<section id="container">
+    <section id="filter">
+        <p>Filtr poprzez typ egzaminu</p>
+        <form method="post">
+            {% csrf_token %}
+            <label for="filter">Filtr: </label>
+            <select name="filter" id="filter">
+                <option value="none" {% if request.POST.filter == 'none' %}selected{% endif %}>-----------</option>
+                {% for type in types %}
+                    <option value="{{ type.question_type }}" {% if request.POST.filter == type.question_type %}selected{% endif %}>{{ type.question_type }}</option>
+                {% endfor %}
+            </select> <br/> <br/>
+            <button type="submit">Filtruj</button>
+        </form>
+    </section>
+    <section id="score-table">
+        <table id="all-exams">
+            <thead>
+                <tr>
+                    <th>L.p</th>
+                    <th>Wynik</th>
+                    <th>Typ egzaminu</th>
+                    <th>Ilość pytań</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if scores %}
+                {% for score in scores %}
+                <tr class="{{ score.exam_type|name_without_space }} score">
+                    <td>{{ score.id }}</td>
+                    <td>{{ score.score }}%</td>
+                    <td>{{ score.exam_type }}</td>
+                    <td>{{ score.amount_of_questions }}</td>
+                    <td>{{ score.exam_date }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="5">Nie zapisano żadnego wyniku z egzaminu</td>
+                </tr>
+                {% endif %}    
+            </tbody>
+        </table>
+    </section>
+    <section id="performance">
+        <h3>Statystki ogólne</h3>
+        <table id="stats">
+            <tbody>
+                <tr>
+                    <td>Średni wynik dnia</td>
+                    <td id="average-today">{{ average_today }}%</td>
+                </tr>
+                <tr>
+                    <td>Średni wynik tygodnia</td>
+                    <td id="average-week">{{ average_week }}%</td>
+                </tr>
+                <tr>
+                    <td>Średni wynik wszystkich</td>
+                    <td id="average-all">{{ average_all }}%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>  
+</section>
+{% endblock %}

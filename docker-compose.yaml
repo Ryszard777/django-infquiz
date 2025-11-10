@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:17.6
+    restart: always
+    environment:
+      POSTGRES_USER: djangoadmin
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_DB: django
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./baza.sql:/docker-entrypoint-initdb.d/baza.sql:ro
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    working_dir: /app/backend
+    command: gunicorn web_project.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=0
+      - DJANGO_ALLOWED_HOSTS=*
+      - DATABASE_NAME=django
+      - DATABASE_USER=djangoadmin
+      - DATABASE_PASSWORD=qwerty
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+    depends_on:
+      - db
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:1.27
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./backend/static_collected:/static
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:

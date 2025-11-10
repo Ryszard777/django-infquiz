@@ -1,0 +1,153 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+INF 03
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/css/inf.css' %}">
+{% endblock %}
+{% block content %}
+<header>
+    Kilka słów o INF 03
+</header>
+<section id="container">
+    <section id="exam-info">
+        <p class="text">W zakresie kwalifikacji INF.03. Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych:</p>
+        <ol>
+            <li>tworzenia i administrowania stronami internetowymi,</li>
+            <li>tworzenia, administrowania i użytkowania relacyjnych baz danych,</li>
+            <li>programowania aplikacji internetowych,</li>
+            <li>tworzenia i administrowania systemami zarządzania treścią.</li>
+        </ol>
+
+        <h4 class="text">Trochę dokładniej poniżej ;)</h4>
+        <ol>
+            <li>Bezpieczeństwo i higiena pracy
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje środki techniczne i ochrony zbiorowej podczas wykonywania zadań zawodowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> identyfikuje wymagania w zakresie oświetlenia, temperatury i mikroklimatu pomieszczeń biurowych </li>
+                </ul>
+            </li><br/>
+            <li>Podstawy informatyki
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje zalecenia dotyczące ułatwień dostępności serwisów internetowych dla osób niepełnosprawnych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> wymienia wymagania dotyczące poziomu dostępności według wytycznych WCAG 2.0 </li><br/>
+                    <li>Efekt kształcenia: <br/> stosuje zasady cyberbezpieczeństwa  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozróżnia rodzaje szkodliwego oprogramowania </li>
+                </ul>
+            </li><br/>
+            <li>Projektowanie stron internetowych
+                <ul>
+                    <li>Efekt kształcenia: <br/> posługuje się hipertekstowymi językami znaczników (HTML − HyperText Markup Language) </li><br/>
+                    <li>Kryterium weryfikacji: <br/> 
+                        <ul>
+                            <li>korzysta ze standardów dokumentów hipertekstowych </li>
+                            <li>stosuje znaczniki języka HTML</li> 
+                            <li>wykonuje formularze na stronie internetowej</li>
+                        </ul> 
+                    </li><br/>
+                    <li>Efekt kształcenia: <br/>  stosuje kaskadowe arkusze stylów do tworzenia responsywnych stron internetowych  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> 
+                    <ul>
+                        <li>ozróżnia selektory elementów, atrybutów, specjalne, pseudoklas i pseudoelementów</li>
+                        <li>stosuje selektory CSS, ich własności i wartości</li>
+                        <li>projektuje wygląd strony internetowej przy wykorzystaniu języka CSS</li>
+                    </ul>
+                    </li><br/>
+                    <li>Efekt kształcenia: <br/> stosuje systemy zarządzania treścią CMS (Content Management System)  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> administruje systemem zarządzania treścią (Joomla! i WordPress) </li><br/>
+                    <li>Efekt kształcenia: <br/> projektuje grafikę komputerową  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> 
+                        <ul>
+                            <li>stosuje różne modele barw</li>
+                            <li>korzysta z funkcji edytora grafiki rastrowej</li>
+                        </ul>
+                    </li><br/>
+                    <li>Efekt kształcenia: <br/> wykonuje strony internetowe zgodnie z projektami </li><br/>
+                    <li>Kryterium weryfikacji: <br/> projektuje układ sekcji na stronie internetowej </li>
+                </ul>
+            </li><br/>
+            <li>Projektowanie i administrowanie bazami
+                <ul>
+                    <li>Efekt kształcenia: <br/> tworzy diagramy E/R (Entity-Relationship Diagram) </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozróżnia bloki składowe diagramów E/R </li><br/>
+                    <li>Efekt kształcenia: <br/> stosuje strukturalny język zapytań SQL (Structured Query Language) </li><br/>
+                    <li>Kryterium weryfikacji: <br/> wyszukuje informacje w bazie danych przy użyciu języka SQL </li><br/>
+                    <li>Efekt kształcenia: <br/> tworzy relacyjne bazy danych zgodnie z projektem  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> definiuje typy danych oraz atrybuty kolumn </li>
+                </ul>
+            </li><br/>
+            <li>Programowanie aplikacji internetowych
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje skryptowe języki programowania  </li><br/>
+                    <li>Kryterium weryfikacji: <br/>stosuje instrukcje sterujące skryptowych języków programowania </li><br/>
+                    <li>Efekt kształcenia: <br/> programuje skrypty wykonywane po stronie serwera  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> stosuje wbudowane instrukcje, funkcje </li>
+                </ul>
+            </li><br/>
+            <li>Język obcy zawodowy
+                <ul>
+                    <li>Efekt kształcenia: <br/>
+                        posługuje się podstawowym zasobem środków językowych
+                        w języku obcym nowożytnym (ze szczególnym
+                        uwzględnieniem środków leksykalnych), umożliwiającym
+                        realizację czynności zawodowych w zakresie tematów
+                        związanych:
+                        <ul>
+                            <li>ze stanowiskiem pracy i jego wyposażeniem</li>
+                            <li>z głównymi technologiami stosowanymi w danym zawodzie</li>
+                            <li>z dokumentacją związaną z danym zawodem</li>
+                            <li>z usługami świadczonymi w danym zawodzie</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Kryterium weryfikacji: <br/>
+                        rozpoznaje oraz stosuje środki językowe umożliwiające
+                        realizację czynności zawodowych w zakresie:
+                        <ul>
+                            <li>czynności wykonywanych na stanowisku pracy, w tym
+                            związanych z zapewnieniem bezpieczeństwa i higieny pracy</li>
+                            <li>narzędzi, maszyn, urządzeń i materiałów koniecznych do
+                            realizacji czynności zawodowych</li>
+                            <li>procesów i procedur związanych z realizacją zadań zawodowych</li>
+                            <li>formularzy, specyfikacji oraz innych dokumentów
+                            związanych z wykonywaniem zadań zawodowych</li>
+                            <li>świadczonych usług, w tym obsługi klienta</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+            <li>Kompetencje personalne i społeczne
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje zasady komunikacji interpersonalnej  </li><br/>
+                    <li>Kryterium weryfikacji: <br/> identyfikuje sygnały werbalne i niewerbalne </li>
+                </ul>
+            </li><br/>
+            <li>Organizacja pracy małych zespołów
+                <ul>
+                    <li>Efekt kształcenia: <br/> planuje i organizuje pracę zespołu w celu wykonania przydzielonych zadań </li><br/>
+                    <li>Kryterium weryfikacji: <br/> przygotowuje zadania zespołu do realizacji </li>
+                </ul>
+            </li><br/>
+        </ol>
+        <p>Lista stworzona na podstawie <a href="https://cke.gov.pl/images/_EGZAMIN_ZAWODOWY/Formula_2019/Informatory/technik_informatyk.pdf" target="_blank">pliku CKE technik informatyk</a></p>
+    </section>
+     <aside id="exam-links">
+         <a href="{% url '40_questions' category='INF 03' %}" class="exam-link">
+             <div class="exam-div">
+                 <header>Egzamin z 40 pytań</header>
+                 <img src="{% static 'hello/icons/inf03.png' %}" alt="Egzamin INF 03">
+                </div>
+            </a>
+            <a href="{% url 'all_questions' category='INF 03' %}" class="exam-link">
+                <div class="exam-div">
+                    <header>Egzamin z wszystkich pytań</header>
+                    <img src="{% static 'hello/icons/inf03.png' %}" alt="Egzamin INF 03">
+                    <hr>
+                    <p id="amount">Liczba pytań: {{ amount }}</p>
+                </div>
+            </a>
+        </aside>
+</section>
+
+{% endblock %}

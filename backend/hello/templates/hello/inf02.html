@@ -1,0 +1,148 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+INF 02
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/css/inf.css' %}">
+{% endblock %}
+{% block content %}
+<header>
+    Kilka słow o INF 02
+</header>
+<section id="container">
+    <section id="exam-info">
+        <p class="text">W zakresie kwalifikacji INF.02. Administracja i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych:</p>
+        <ol>
+            <li>przygotowania do pracy systemu komputerowego i urządzeń peryferyjnych,</li>
+            <li>administrowania systemami operacyjnymi,</li>
+            <li>serwisowania i naprawiania urządzeń techniki komputerowej,</li>
+            <li>przygotowania i eksploatacji lokalnej sieci komputerowej.</li>
+        </ol>
+        <h4 class="text">Trochę dokładniej poniżej ;)</h4>
+        <ol>
+            <li>Bezpieczeństwo i higiena pracy
+                <ul>
+                    <li>Efekt kształcenia: <br/> określa skutki oddziaływania czynników szkodliwych na organizm człowieka </li><br/>
+                    <li>Kryterium weryfikacji: <br/> określa zagrożenia występujące w środowisku pracy </li>
+                </ul>
+            </li><br/>
+
+            <li>Podstawy informatyki
+                <ul>
+                    <li>Efekt kształcenia: <br/> definiuje elementy architektury systemów komputerowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> opisuje zasadę działania procesora (rozkazy) </li><br/>
+                    <li>Efekt kształcenia: <br/> stosuje zalecenia dotyczące ułatwień dostępności serwisów internetowych dla osób niepełnosprawnych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> wymienia wymagania dotyczące poziomu dostępności według wytycznych WCAG 2.0 </li><br/>
+                    <li>Efekt kształcenia: <br/> rozpoznaje właściwe normy i procedury oceny zgodności podczas realizacji zadań zawodowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozróżnia oznaczenie normy międzynarodowej, europejskiej i krajowej </li>
+                </ul>
+            </li><br/>
+
+            <li>Przygotowanie stanowiska komputerowego do pracy
+                <ul>
+                    <li>Efekt kształcenia: <br/> posługuje się pojęciami z dziedziny elektrotechniki </li><br/>
+                    <li>Kryterium weryfikacji: <br/> analizuje proste układy kombinacyjne zapisane za pomocą bramek logicznych </li><br/>
+                    <li>Efekt kształcenia: <br/> wymienia funkcje i wyjaśnia zasady działania podzespołów komputera </li><br/>
+                    <li>Kryterium weryfikacji: <br/> opisuje funkcje elementów, z których zbudowany jest procesor, pamięć operacyjna i karty rozszerzeń </li><br/>
+                    <li>Efekt kształcenia: <br/> pisze skrypty w systemach operacyjnych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> stosuje instrukcję pętli w skryptach </li>
+                </ul>
+            </li><br/>
+
+            <li>Eksploatacja urządzeń peryferyjnych
+                <ul>
+                    <li>Efekt kształcenia: <br/> określa funkcje, budowę i zasadę działania urządzeń peryferyjnych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozpoznaje rodzaje interfejsów komunikacyjnych urządzeń peryferyjnych </li><br/>
+                    <li>Efekt kształcenia: <br/> przygotowuje urządzenia peryferyjne do pracy </li><br/>
+                    <li>Kryterium weryfikacji: <br/> podłącza urządzenia peryferyjne do systemu komputerowego </li><br/>
+                    <li>Efekt kształcenia: <br/> monitoruje pracę i wykonuje konserwację urządzeń peryferyjnych systemu komputerowego </li><br/>
+                    <li>Kryterium weryfikacji: <br/> identyfikuje materiały eksploatacyjne urządzeń peryferyjnych </li>
+                </ul>
+            </li><br/>
+
+            <li>Naprawa urządzeń techniki komputerowej
+                <ul>
+                    <li>Efekt kształcenia: <br/> posługuje się narzędziami do naprawy sprzętu komputerowego </li><br/>
+                    <li>Kryterium weryfikacji: <br/> stosuje aplikacje diagnozujące pracę urządzeń techniki komputerowej </li><br/>
+                    <li>Efekt kształcenia: <br/> lokalizuje i usuwa uszkodzenia sprzętowe urządzeń techniki komputerowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> lokalizuje uszkodzenia urządzenia techniki komputerowej </li><br/>
+                    <li>Efekt kształcenia: <br/> odzyskuje dane z urządzeń techniki komputerowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> dobiera oprogramowanie do odzyskiwania danych </li>
+                </ul>
+            </li><br/>
+
+            <li>Montaż i eksploatacja lokalnej sieci komputerowej
+                <ul>
+                    <li>Efekt kształcenia: <br/> interpretuje projekty sieci komputerowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> analizuje projekt sieci komputerowej </li><br/>
+                    <li>Efekt kształcenia: <br/> tworzy modele i schematy lokalnych sieci komputerowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> konfiguruje urządzenia w symulatorze sieci komputerowej </li><br/>
+                    <li>Efekt kształcenia: <br/> wykonuje testy i analizę lokalnej sieci komputerowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozróżnia testy pasywne i aktywne </li>
+                </ul>
+            </li><br/>
+
+            <li>Eksploatacja urządzeń sieciowych
+                <ul>
+                    <li>Efekt kształcenia: <br/> określa funkcje, budowę i zasadę działania urządzeń sieciowych </li><br/>
+                    <li>Kryterium weryfikacji: <br/> interpretuje parametry techniczne urządzeń sieciowych </li><br/>
+                    <li>Efekt kształcenia: <br/> konfiguruje przełączniki lokalnej sieci komputerowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> konfiguruje funkcję gwarantowania jakości usług (QoS) </li><br/>
+                    <li>Efekt kształcenia: <br/> konfiguruje urządzenia dostępu do lokalnej sieci bezprzewodowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> identyfikuje standardy szyfrowania sieci bezprzewodowej </li>
+                </ul>
+            </li><br/>
+
+            <li>Administrowanie serwerowymi systemami operacyjnymi
+                <ul>
+                    <li>Efekt kształcenia: <br/> konfiguruje usługi i funkcje sieciowych systemów operacyjnych z rodziny Windows oraz Linux </li><br/>
+                    <li>Kryterium weryfikacji: <br/> konfiguruje usługi i funkcje serwerowych systemów operacyjnych z rodziny Windows i Linux </li><br/>
+                    <li>Efekt kształcenia: <br/> promuje i zarządza kontrolerem domeny </li><br/>
+                    <li>Kryterium weryfikacji: <br/> konfiguruje i zarządza zasadami grup GPO (Group Policy Object) </li><br/>
+                    <li>Efekt kształcenia: <br/> udostępnia zasoby w sieci komputerowej </li><br/>
+                    <li>Kryterium weryfikacji: <br/> konfiguruje zasoby sieciowe </li>
+                </ul>
+            </li><br/>
+
+            <li>Język obcy zawodowy
+                <ul>
+                    <li>Efekt kształcenia: <br/> posługuje się podstawowym zasobem środków językowych w języku obcym nowożytnym umożliwiającym realizację czynności zawodowych w zakresie tematów związanych ze stanowiskiem pracy i jego wyposażeniem </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozpoznaje oraz stosuje środki językowe umożliwiające realizację czynności zawodowych w zakresie narzędzi, maszyn, urządzeń i materiałów koniecznych do realizacji czynności zawodowych </li>
+                </ul>
+            </li><br/>
+
+            <li>Kompetencje personalne i społeczne
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje techniki radzenia sobie ze stresem </li><br/>
+                    <li>Kryterium weryfikacji: <br/> rozpoznaje źródła stresu podczas wykonywania zadań zawodowych </li>
+                </ul>
+            </li><br/>
+
+            <li>Organizacja pracy małych zespołów
+                <ul>
+                    <li>Efekt kształcenia: <br/> wprowadza rozwiązania techniczne i organizacyjne wpływające na poprawę warunków i jakości pracy </li><br/>
+                    <li>Kryterium weryfikacji: <br/> dokonuje analizy rozwiązań technicznych i organizacyjnych warunków i jakości pracy </li>
+                </ul>
+            </li><br/>
+        </ol>
+        <p>Lista stworzona na podstawie <a href="https://cke.gov.pl/images/_EGZAMIN_ZAWODOWY/Formula_2019/Informatory/technik_informatyk.pdf" target="_blank">pliku CKE technik informatyk</a></p>
+    </section>
+    <aside id="exam-links">
+        <a href="{% url '40_questions' category='INF 02' %}" class="exam-link">
+            <div class="exam-div">
+                <header>Egzamin z 40 pytań</header>
+                <img src="{% static 'hello/icons/inf02.png' %}" alt="Egzamin INF 02">
+            </div>
+        </a>
+        <a href="{% url 'all_questions' category='INF 02' %}" class="exam-link">
+            <div class="exam-div">
+                <header>Egzamin z wszystkich pytań</header>
+                <img src="{% static 'hello/icons/inf02.png' %}" alt="Egzamin INF 02">
+                <hr>
+                <p id="amount">Liczba pytań: {{ amount }}</p>
+            </div>
+        </a>
+    </aside>
+</section>
+{% endblock %}

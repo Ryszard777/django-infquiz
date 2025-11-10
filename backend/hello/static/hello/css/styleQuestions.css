@@ -1,0 +1,101 @@
+:root {
+    --bg-question-div: rgba(160, 112, 255, 0.184);
+    --border-question-div: #000000;
+    --bg-answer: #4bb7ffb1;
+    --hr-color: #000000;
+}
+
+:has(#theme-slider:checked) {
+    --bg-question-div: #2f2f2f;
+    --border-question-div: #ffffff00;
+    --bg-answer: #7300b66d;
+    --hr-color: #ffffff;
+}
+
+div.question {
+    background-color: var(--bg-question-div);
+    border: 1px solid var(--border-question-div);
+    width: 75%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    transition: background-color var(--time-bg) ease, color var(--time-color) ease;
+    label {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+div.question p.end {
+    opacity: 0.6;
+    padding: 10px;
+}
+
+div p.correct {
+    background-color: rgba(74, 145, 85, 0.373);
+    padding: 10px;
+}
+
+div.question p.chosen {
+    background-color: rgba(60, 255, 0, 0.46);
+    padding: 10px;
+}
+
+div.question.wrong p.chosen {
+    background-color: #ff505093;
+}
+
+div.question.wrong p.correctAns {
+    background-color: rgba(60, 255, 0, 0.46);
+    padding: 10px;
+}
+
+input[type=button] {
+    background-color: var(--bg-button);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px;
+    margin: auto;
+    transition: background-color var(--time-bg) ease, color var(--time-color) ease;
+    width: 10%;
+}
+
+hr {
+    background-color:  var(--hr-color);
+    height: 1px;
+    border: none;
+}
+
+.answer {
+    padding: 15px;
+    height: 100%;
+    transition: background-color 300ms;
+}
+
+input[type=radio] {
+    appearance: none;
+}
+
+.answer:has(input:checked) {
+    background-color: var(--bg-answer);
+}
+
+div.image {
+    text-align: center;
+}
+
+img {
+    max-width: 80%;
+}
+
+div#button-container {
+    text-align: center;
+    padding: 30px;
+}
+
+button[type=submit] {
+    width: 10%;
+}
+
+/*Ryszard7744 2025*/

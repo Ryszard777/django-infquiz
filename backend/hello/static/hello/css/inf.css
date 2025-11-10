@@ -1,0 +1,44 @@
+:root {
+    --bg-exam-links: #ffffff;
+}
+
+:has(#theme-slider:checked) {
+    --bg-exam-links: #212121;
+}
+
+section#container {
+    display: flex;
+}
+
+aside#exam-links {
+    margin-right: 50px;
+}
+
+.exam-link {
+    text-decoration: none;
+    color: var(--text);
+    margin: 10px;
+    text-align: center;
+}
+
+.exam-div {
+    margin: 10px;
+    background-color: var(--bg-exam-links);
+    border: 1px solid var(--border);
+    transition: background-color var(--time-bg) ease, color var(--time-color) ease, box-shadow 0.3s ease;
+}
+.exam-div:hover {
+    box-shadow: 0px 0px 10px 3px var(--accent-hover);
+}
+
+.exam-link img {
+    max-width: 40%;
+    width: 100%;
+    margin: 15px;
+    transition: color var(--time-color) ease;
+}
+
+p#amount {
+    text-align: left;
+    padding: 10px;
+}

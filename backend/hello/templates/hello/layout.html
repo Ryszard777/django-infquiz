@@ -1,0 +1,200 @@
+{% load filters %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %} Egzamin informatyk {% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'hello/css/site.css' %}"/>
+        <link rel="shortcut icon" href="{% static 'hello/img/favicon.ico' %}" type="image/x-icon">
+        {% block css %}
+        {% endblock %}
+        <meta content="Ryszard777" name="author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <nav>
+            <div id="theme-container">
+                <svg 
+                    id="sun"
+                    width="5.26295mm"
+                    height="6.78746mm"
+                    viewBox="0 0 103.26295 103.78746"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g
+                        inkscape:label="Warstwa 1"
+                        inkscape:groupmode="layer"
+                        id="layer1"
+                        transform="translate(-55.055497,-81.22901)">
+                       <path
+                        id="path3"
+                        style="stroke:#000000;stroke-width:0.581419;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 107.62076,104.59244 a 27.484179,27.484179 0 0 0 -27.484107,27.48411 27.484179,27.484179 0 0 0 27.484107,27.48411 27.484179,27.484179 0 0 0 27.48411,-27.48411 27.484179,27.484179 0 0 0 -27.48411,-27.48411 z m -0.22531,11.80393 A 15.487513,15.487513 0 0 1 122.8834,131.8838 15.487513,15.487513 0 0 1 107.39545,147.37123 15.487513,15.487513 0 0 1 91.908028,131.8838 15.487513,15.487513 0 0 1 107.39545,116.39637 Z" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect3"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="104.30581"
+                        y="83.663437" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect4"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="104.30581"
+                        y="162.87592" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect5"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="127.20221"
+                        y="-156.08418"
+                        transform="rotate(90)" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect6"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="127.20221"
+                        y="-76.684433"
+                        transform="rotate(90)" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect7"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="-22.49015"
+                        y="117.42596"
+                        transform="rotate(-45)" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect8"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="-175.56229"
+                        y="-35.646164"
+                        transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,0,0)" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect9"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="11.214413"
+                        y="-221.09871"
+                        transform="rotate(135)" />
+                        <rect
+                        style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                        id="rect10"
+                        width="7.3032789"
+                        height="17.602776"
+                        x="162.30031"
+                        y="-70.012802"
+                        transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)" />
+                    </g>
+                    </svg>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-slider" {% if request|get_cookie:"theme" == "dark" %}checked{% endif %}>
+                        <span class="slider round"></span>
+                    </label>
+                    <svg 
+                        id="moon"
+                        width="5.26295mm"
+                        height="6.78746mm"
+                        viewBox="0 0 103.26295 103.78746"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g
+                            inkscape:label="Warstwa 1"
+                            inkscape:groupmode="layer"
+                            id="layer1"
+                            transform="translate(-55.055497,-81.22901)">
+                            <path
+                            id="path2"
+                            style="stroke:#000000;stroke-width:0.465;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 94.085673,81.22901 a 52.808323,52.808323 0 0 0 -39.030176,50.9788 52.808323,52.808323 0 0 0 52.808143,52.80866 52.808323,52.808323 0 0 0 50.45481,-37.21892 46.441364,46.441364 0 0 1 -29.10675,10.25312 46.441364,46.441364 0 0 1 -46.441099,-46.4416 46.441364,46.441364 0 0 1 11.315072,-30.38006 z" />
+                        </g>
+                    </svg>
+            </div>
+            <a href="{% url 'home' %}">
+                <div class="navEle">
+                    <p>
+                        Wyniki
+                    </p>
+                </div>
+            </a>
+            <a href="{% url 'inf02' %}">
+                <div class="navEle">
+                    <p>
+                        INF 02
+                    </p>
+                </div>
+            </a>
+            <a href="{% url 'inf03' %}">
+                <div class="navEle">
+                    <p>
+                        INF 03
+                    </p>
+                </div>
+            </a>
+            <a href="{% url 'inf04' %}">
+                <div class="navEle">
+                    <p>
+                        INF 04
+                    </p>
+                </div>
+            </a>
+            <a href="{% url 'learn' %}">
+                <div class="navEle">
+                    <p>
+                        Nauka
+                    </p>
+                </div>
+            </a>
+            <a href="{% url 'contact' %}">
+                <div class="navEle">
+                    <p>
+                        Kontakt
+                    </p>
+                </div>
+            </a>
+        </nav>
+        <button id="hide-button">
+            <svg
+                id = 'svg-hide-button'
+                width="5.77087mm"
+                height="6.924225mm"
+                viewBox="0 0 102.77087 49.924225"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <g
+                    inkscape:label="Warstwa 1"
+                    inkscape:groupmode="layer"
+                    id="layer1"
+                    transform="translate(-55.291917,-81.780642)">
+                    <path
+                    style="fill:none;stroke-width:8.265;stroke-dasharray:none;stroke-opacity:1"
+                    d="M 57.302659,127.29584 106.74024,85.910596 155.99055,129.35574"
+                    id="path10"
+                    sodipodi:nodetypes="ccc" />
+                </g>
+            </svg>
+
+        </button>
+        
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            Made by Ryszard777 on github 
+        </footer>
+        {% block scripts %}
+        {% endblock %}
+        <script src="{% static 'hello/js/nav_sidebar.js' %}"></script>
+    </body>
+</html>

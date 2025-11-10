@@ -1,0 +1,259 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+INF 04
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/css/inf.css' %}">
+{% endblock %}
+{% block content %}
+<header>
+    Kilka słów o INF 04
+</header>
+<section id="container">
+    <section id="exam-info">
+        <p class="text">W zakresie kwalifikacji INF.04. Projektowanie, programowanie i testowanie aplikacji:</p>
+        <ol>
+            <li>projektowania, programowania i testowania zaawansowanych aplikacji webowych,</li>
+            <li>projektowania, programowania i testowania aplikacji desktopowych,</li>
+            <li>projektowania, programowania i testowania aplikacji mobilnych.</li>
+        </ol>
+        <h4 class="text">Trochę dokładniej poniżej ;)</h4>
+        <ol>
+            <li>Bezpieczeństwo i higiena pracy
+                <ul>
+                    <li>Efekt kształcenia: <br/> określa skutki oddziaływania czynników szkodliwych na organizm człowieka </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>określa zagrożenia występujące w środowisku pracy</li>
+                            <li>określa skutki oddziaływania czynników fizycznych na organizm człowieka</li>
+                            <li>określa skutki oddziaływania czynników psychofizycznych na organizm człowieka</li>
+                            <li>opisuje skutki oddziaływania czynników niebezpiecznych i uciążliwych na organizm człowieka</li>
+                            <li>wyjaśnia pojęcia choroba zawodowa i wypadek przy pracy</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> stosuje środki ochrony indywidualnej i zbiorowej podczas wykonywania zadań zawodowych na stanowisku pracy </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>identyfikuje środki ochrony zbiorowej</li>
+                            <li>wskazuje środki ochrony zabezpieczające przed hałasem w pracy biurowej</li>
+                            <li>identyfikuje wymagania w zakresie oświetlenia, temperatury i mikroklimatu pomieszczeń biurowych</li>
+                            <li>rozpoznaje środki ochrony zapobiegające porażeniem prądem w pracy biurowej</li>
+                            <li>rozpoznaje środki ochrony zapobiegające pogorszeniu wzroku i zniekształceniu kręgosłupa</li>
+                            <li>dobiera środki ochrony zbiorowej do rodzaju zagrożeń w pracy biurowej</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> udziela pierwszej pomocy w stanach nagłego zagrożenia zdrowotnego </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>opisuje podstawowe symptomy wskazujące na stany nagłego zagrożenia zdrowotnego</li>
+                            <li>ocenia sytuację poszkodowanego na podstawie analizy objawów obserwowanych u poszkodowanego</li>
+                            <li>zabezpiecza siebie, poszkodowanego i miejsce wypadku</li>
+                            <li>układa poszkodowanego w pozycji bezpiecznej</li>
+                            <li>powiadamia odpowiednie służby</li>
+                            <li>prezentuje udzielanie pierwszej pomocy w urazowych stanach nagłego zagrożenia zdrowotnego</li>
+                            <li>prezentuje udzielanie pierwszej pomocy w nieurazowych stanach nagłego zagrożenia zdrowotnego</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Podstawy informatyki
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje pozycyjne systemy liczbowe </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>przekształca liczby zapisane w różnych pozycyjnych systemach liczbowych: dwójkowym, ósemkowym, szesnastkowym, dziesiętnym</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Projektowanie oprogramowania
+                <ul>
+                    <li>Efekt kształcenia: <br/> analizuje wymagania i projektuje rozwiązania programistyczne </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>projektuje algorytmy (np. sortowania, wyszukiwań, operacje na łańcuchach)</li>
+                            <li>projektuje zestawy danych i typy do zadanego problemu</li>
+                            <li>projektuje klasę z zestawem pól i metod obsługujących konkretne zagadnienie</li>
+                            <li>projektuje interfejs użytkownika dla różnych typów aplikacji</li>
+                            <li>projektuje zestaw okien dialogowych dla aplikacji okienkowej</li>
+                            <li>projektuje interfejs użytkownika z wykorzystaniem języków znaczników</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Programowanie obiektowe
+                <ul>
+                    <li>Efekt kształcenia: <br/> wykorzystuje środowisko programistyczne dla obiektowych aplikacji konsolowych </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>dobiera środowisko programistyczne do określonych zadań i języka programowania</li>
+                            <li>kompiluje i uruchamia programy</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> przestrzega zasad programowania </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>dzieli program na funkcje (metody)</li>
+                            <li>stosuje instrukcje pętli i warunkowe</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> implementuje algorytmy w programie </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>definiuje klasy i metody klasy</li>
+                            <li>stosuje biblioteki standardowe i matematyczne</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Programowanie aplikacji desktopowych
+                <ul>
+                    <li>Efekt kształcenia: <br/> implementuje aplikacje okienkowe zgodnie z projektem </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>projektuje zestaw okien dialogowych dla aplikacji okienkowej</li>
+                            <li>wykorzystuje kontrolki, obsługę zdarzeń i mechanizmy walidacji danych</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Programowanie aplikacji mobilnych
+                <ul>
+                    <li>Efekt kształcenia: <br/> implementuje aplikacje mobilne </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>implementuje aplikacje mobilne obsługujące obrazy</li>
+                            <li>implementuje aplikacje mobilne z systemem menu i przechodzeniem do podstron</li>
+                            <li>programuje przechowywanie danych i preferencji użytkownika</li>
+                            <li>programuje interfejs użytkownika za pomocą języka XAML</li>
+                            <li>uruchamia aplikacje mobilne i przygotowuje je do publikacji w sklepie</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Programowanie aplikacji webowych
+                <ul>
+                    <li>Efekt kształcenia: <br/> wykorzystuje środowisko programistyczne dla aplikacji webowych </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>dobiera środowisko programistyczne do określonych zadań i języka programowania</li>
+                            <li>stosuje frameworki typowe dla aplikacji webowych</li>
+                            <li>programuje aplikacje webowe z wykorzystaniem języków programowania</li>
+                            <li>programuje aplikacje korzystające z bazy danych</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Testowanie i dokumentowanie aplikacji
+                <ul>
+                    <li>Efekt kształcenia: <br/> przeprowadza walidację kodu programu </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>dobiera narzędzia i środowisko do testowania programów</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> dokumentuje tworzoną aplikację </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>stosuje komentarze w kodzie źródłowym programu</li>
+                            <li>pisze dokumentację kodu</li>
+                            <li>pisze dokumenty pomocy programu</li>
+                            <li>przygotowuje dokumentację z wykonanych testów</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> przeprowadza testy </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>charakteryzuje metodyki testowania</li>
+                            <li>przygotowuje testy funkcjonalne i niefunkcjonalne</li>
+                            <li>automatyzuje proces testowania</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Język obcy zawodowy
+                <ul>
+                    <li>Efekt kształcenia: <br/> posługuje się podstawowym zasobem środków językowych w języku obcym nowożytnym umożliwiającym realizację czynności zawodowych </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>rozpoznaje oraz stosuje środki językowe umożliwiające realizację czynności zawodowych w zakresie stanowiska pracy i jego wyposażenia</li>
+                            <li>narzędzi, maszyn, urządzeń i materiałów koniecznych do realizacji czynności zawodowych</li>
+                            <li>procesów i procedur związanych z realizacją zadań zawodowych</li>
+                            <li>formularzy, specyfikacji oraz innych dokumentów związanych z wykonywaniem zadań zawodowych</li>
+                            <li>świadczonych usług, w tym obsługi klienta</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Kompetencje personalne i społeczne
+                <ul>
+                    <li>Efekt kształcenia: <br/> stosuje techniki radzenia sobie ze stresem </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>rozpoznaje źródła stresu podczas wykonywania zadań zawodowych</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> stosuje zasady komunikacji interpersonalnej </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>identyfikuje sygnały werbalne i niewerbalne</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+
+            <li>Organizacja pracy małych zespołów
+                <ul>
+                    <li>Efekt kształcenia: <br/> planuje i organizuje pracę zespołu w celu wykonania przydzielonych zadań </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>przygotowuje zadania zespołu do realizacji</li>
+                        </ul>
+                    </li><br/>
+
+                    <li>Efekt kształcenia: <br/> wprowadza rozwiązania techniczne i organizacyjne wpływające na poprawę warunków i jakości pracy </li><br/>
+                    <li>Kryterium weryfikacji:
+                        <ul>
+                            <li>dokonuje analizy rozwiązań technicznych i organizacyjnych warunków i jakości pracy</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li><br/>
+        </ol>
+        <p>Lista stworzona na podstawie <a href="https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EE/EE_Zawodowy/Informatory/2024/technik_programista.pdf" target="_blank">pliku OKE technik programista</a></p>
+    </section>
+    <aside id="exam-links">
+         <a href="{% url '40_questions' category='INF 04' %}" class="exam-link">
+             <div class="exam-div">
+                 <header>Egzamin z 40 pytań</header>
+                 <img src="{% static 'hello/icons/inf04.png' %}" alt="Egzamin INF 04">
+                </div>
+            </a>
+            <a href="{% url 'all_questions' category='INF 04' %}" class="exam-link">
+                <div class="exam-div">
+                    <header>Egzamin z wszystkich pytań</header>
+                    <img src="{% static 'hello/icons/inf04.png' %}" alt="Egzamin INF 04">
+                    <hr>
+                    <p id="amount">Liczba pytań: {{ amount }}</p>
+                </div>
+            </a>
+    </aside>
+</section>
+{% endblock %}

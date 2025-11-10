@@ -1,0 +1,49 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Wszystkie pytania
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet"  type="text/css" href="{% static 'hello/css/styleQuestions.css' %}">
+{% endblock %}
+{% block content %}
+<header>
+        Egzamin INF 03 Wysztkie pytania <br/> Powodzenia!
+</header>
+    <form method="POST">
+        {% csrf_token %}
+        {% for question in form %}
+        <div class="question">
+            <h2>{{ forloop.counter }}. {{ question.label|safe }}</h2>
+            <label for="question_{{ question.help_text }}A">
+                <div class="answer"><input type="radio" name="question_{{ question.help_text }}" id="question_{{ question.help_text }}A" value="A" required>
+                    A. {{ question.field.choices.0.1|safe }}
+                </div>
+            </label>
+            <label for="question_{{ question.help_text }}B">
+                <div class="answer"><input type="radio" name="question_{{ question.help_text }}" id="question_{{ question.help_text }}B" value="B" required>
+                    B. {{ question.field.choices.1.1|safe }}
+                </div>
+            </label>
+            <label for="question_{{ question.help_text }}C">
+                <div class="answer"><input type="radio" name="question_{{ question.help_text }}" id="question_{{ question.help_text }}C" value="C" required>
+                    C. {{ question.field.choices.2.1|safe }}
+                </div>
+            </label>
+            <label for="question_{{ question.help_text }}D">
+                <div class="answer"><input type="radio" name="question_{{ question.help_text }}" id="question_{{ question.help_text }}D" value="D" required>
+                    D. {{ question.field.choices.3.1|safe }}
+                </div>
+            </label>
+            {% if question.help_text in img %}
+                <div class="image">
+                <img src="{% static 'hello/img/' %}{{ category }}_{{ question.help_text }}.jpg" alt="Obraz" loading="lazy">
+                </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <div id="button-container">
+            <button type="submit">Zakończ</button>
+        </div>
+    </form>
+{% endblock %}
